@@ -17,7 +17,7 @@ class Player{
 
 class State{
     -board: int[][]
-    +emptyBoard() : void
+    +emptyBoard(int rows, int cols) : void
 
 }
 
@@ -25,7 +25,7 @@ class Game{
     + int rows
     + int columns
     - State initialState
-    + getActions(State state) : Action
+    + getActions(State state) : Action[]
     + getResult(State state, Action action) : State
     + getUtility(State state) : int
     + isTerminal(State state) : boolean
@@ -36,6 +36,8 @@ class Action{
 }
 
 class Renderer{
+    +int diskSize$
+    +int diskPadding$
     +renderGame(Game game) : void
 }
 
@@ -46,7 +48,7 @@ class Disk{
 }
 
 class DiskSkins{
-    - Color color
+    - String color
     <<Enumeration>>
     RED
     YELLOW
