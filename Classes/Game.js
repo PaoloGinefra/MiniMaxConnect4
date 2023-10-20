@@ -27,6 +27,15 @@ class Game {
     return newState;
   }
 
+  setState(state) {
+    this.state = state;
+  }
+
+  switchPlayer() {
+    this.currentPlayer =
+      this.currentPlayer.id === Players.MAX.id ? Players.MIN : Players.MAX;
+  }
+
   isTerminal(state) {
     return true;
   }

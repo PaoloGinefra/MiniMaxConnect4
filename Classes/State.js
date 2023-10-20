@@ -2,7 +2,7 @@ class State {
   board = [];
 
   constructor(rows, cols) {
-    this.randomBoard(rows, cols);
+    this.emptyBoard(rows, cols);
   }
 
   emptyBoard(rows, cols) {

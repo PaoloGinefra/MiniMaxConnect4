@@ -29,6 +29,8 @@ class Game{
     + getResult(State state, Action action) : State
     + getUtility(State state) : int
     + isTerminal(State state) : boolean
+    + setState(State state) : void
+    + switchPlayer() : void
 }
 
 class Action{
